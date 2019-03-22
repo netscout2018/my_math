@@ -1,5 +1,7 @@
 import	mathaddsub  # file in current directory that has our 'add' & 'subtract' functions defined
 import	mathlibmuldiv  # file in current directory that has our 'multiply' & 'divide' functions defined
+import  mathsqrtpwr  # file in current directory that has our 'square root' & 'x to the y power' functions defined
+
 #..................	V E R Y   I M P O R T A N T   M E S S A G E   B E L O W  ..........
 ###....The 'pytest' framework execution (THIS) file, along with all functions defined within it 'MUST' start with 'test_'  
 #
@@ -18,6 +20,15 @@ def	test_calc_mult():
 def	test_calc_div():
 	result = mathlibmuldiv.calc_div(10,2)
 	assert result == 5
+	
+def	test_calc_sqrt():
+	result = mathsqrtpwr.calc_sqroot(16)
+	assert result == 4
+
+def	test_calc_pwr():
+	result = mathsqrtpwr.calc_pwr(2,6)
+	assert result == 64
+	
 #
 #C:\PythonScripts\pytest_framework>pytest      (you could also type 'python -m pytest' on console command line)
 #
